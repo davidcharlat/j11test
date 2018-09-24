@@ -12,13 +12,85 @@ FILE="ft_create_elem"
 if [ -f j11/ex00/$FILE.c ] && [ -f j11/ex00/ft_list.h ]
 then
 	gcc -o z.out j11/ex00/$FILE.c $FILE.test.c || errorExit "Error: compilation $FILE failed";
-	./z.out
+	./z.out || errorExit "Error: $FILE failed";
 	let "n = n + 1"
 fi
-
+FILE="ft_list_push_back"
+if [ -f j11/ex01/$FILE.c ] && [ -f j11/ex01/ft_list.h ]
+then
+	gcc -o z.out j11/ex01/$FILE.c $FILE.test.c ft_create_elem.c || errorExit "Error: compilation $FILE failed";
+	./z.out || errorExit "Error: $FILE failed";
+	let "n = n + 1"
+fi
+FILE="ft_list_push_front"
+if [ -f j11/ex02/$FILE.c ] && [ -f j11/ex02/ft_list.h ]
+then
+	gcc -o z.out j11/ex02/$FILE.c $FILE.test.c ft_create_elem.c || errorExit "Error: compilation $FILE failed";
+	./z.out || errorExit "Error: $FILE failed";
+	let "n = n + 1"
+fi
+FILE="ft_list_size"
+if [ -f j11/ex03/$FILE.c ] && [ -f j11/ex03/ft_list.h ]
+then
+	gcc -o z.out j11/ex03/$FILE.c $FILE.test.c ft_create_elem.c || errorExit "Error: compilation $FILE failed";
+	./z.out || errorExit "Error: $FILE failed";
+	let "n = n + 1"
+fi
+FILE="ft_list_last"
+if [ -f j11/ex04/$FILE.c ] && [ -f j11/ex04/ft_list.h ]
+then
+	gcc -o z.out j11/ex04/$FILE.c $FILE.test.c ft_create_elem.c || errorExit "Error: compilation $FILE failed";
+	./z.out || errorExit "Error: $FILE failed";
+	let "n = n + 1"
+fi
+FILE="ft_list_push_params"
+if [ -f j11/ex05/$FILE.c ] && [ -f j11/ex05/ft_list.h ]
+then
+	gcc -o z.out j11/ex05/$FILE.c $FILE.test.c ft_create_elem.c || errorExit "Error: compilation $FILE failed";
+	./z.out hello good bye || errorExit "Error: $FILE with 'hello', 'good' and 'bye' as args failed";
+	./z.out || errorExit "Error: $FILE failed";
+	let "n = n + 1"
+fi
+FILE="ft_list_clear"
+if [ -f j11/ex06/$FILE.c ] && [ -f j11/ex06/ft_list.h ]
+then
+	gcc -o z.out j11/ex06/$FILE.c $FILE.test.c ft_create_elem.c || errorExit "Error: compilation $FILE failed";
+	./z.out || errorExit "Error: $FILE failed";
+	let "n = n + 1"
+fi
+FILE="ft_list_at"
+if [ -f j11/ex07/$FILE.c ] && [ -f j11/ex07/ft_list.h ]
+then
+	gcc -o z.out j11/ex07/$FILE.c $FILE.test.c ft_create_elem.c || errorExit "Error: compilation $FILE failed";
+	./z.out || errorExit "Error: $FILE failed";
+	let "n = n + 1"
+fi
+FILE="ft_list_reverse"
+if [ -f j11/ex08/$FILE.c ] && [ -f j11/ex08/ft_list.h ]
+then
+	gcc -o z.out j11/ex08/$FILE.c $FILE.test.c ft_create_elem.c || errorExit "Error: compilation $FILE failed";
+	./z.out || errorExit "Error: $FILE failed";
+	let "n = n + 1"
+fi
+FILE="ft_list_foreach"
+if [ -f j11/ex09/$FILE.c ] && [ -f j11/ex09/ft_list.h ]
+then
+	gcc -o z.out j11/ex09/$FILE.c $FILE.test.c ft_create_elem.c || errorExit "Error: compilation $FILE failed";
+	./z.out || errorExit "Error: $FILE failed";
+	let "n = n + 1"
+fi
+FILE="ft_list_foreach_if"
+if [ -f j11/ex10/$FILE.c ] && [ -f j11/ex10/ft_list.h ]
+then
+	gcc -o z.out j11/ex10/$FILE.c $FILE.test.c ft_create_elem.c || errorExit "Error: compilation $FILE failed";
+	./z.out || errorExit "Error: $FILE failed";
+	let "n = n + 1"
+fi
 rm z.out
 exit 0;
 	
+	
+	void	(t_list **begin_list, void *data)
 	
 	
 	OUTPUT="`./z.out`";

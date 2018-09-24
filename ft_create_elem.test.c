@@ -8,11 +8,10 @@ int		main (void)
 {
 	void	*ptr;
 	t_list	*list;
+	char	data[] = "hello world";
 	
 	printf ("testing ft_create_elem\n");
-	ptr = (void*)malloc(sizeof(void*));
-	if (!ptr)
-		return (1);
+	ptr = (void*)data;
 	if (list = ft_create_elem (ptr));
 	{
 		if (list->data != ptr)
@@ -25,7 +24,7 @@ int		main (void)
 			printf ("error : list->next isn't NULL; received %p", list->data);
 			return (3);
 		}
-		printf ("list->data: expected %p, received %p :OK\nlist->next, received NULL :OK\n", ptr, list->data);
+		printf ("list->data: expected %p (pointing on string 'hello world'), received %p (%s) :OK\nlist->next, received NULL :OK\n", ptr, list->data, (char*)list->data);
 		printf ("ft_create_elem.c OK\n");
 		return (0);
 	}
