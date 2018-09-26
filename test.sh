@@ -86,6 +86,20 @@ then
 	./z.out || errorExit "Error: $FILE failed";
 	let "n = n + 1"
 fi
+FILE="ft_list_find"
+if [ -f j11/ex11/$FILE.c ] && [ -f j11/ex11/ft_list.h ]
+then
+	gcc -o z.out j11/ex11/$FILE.c $FILE.test.c ft_create_elem.c || errorExit "Error: compilation $FILE failed";
+	./z.out || errorExit "Error: $FILE failed";
+	let "n = n + 1"
+fi
+FILE="ft_list_remove_if"
+if [ -f j11/ex12/$FILE.c ] && [ -f j11/ex12/ft_list.h ]
+then
+	gcc -o z.out j11/ex12/$FILE.c $FILE.test.c ft_create_elem.c || errorExit "Error: compilation $FILE failed";
+	./z.out || errorExit "Error: $FILE failed";
+	let "n = n + 1"
+fi
 rm z.out
 exit 0;
 	

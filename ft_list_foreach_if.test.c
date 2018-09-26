@@ -132,6 +132,8 @@ void	e_into_z (void* data)
 	    clear(&copy);
 		return (1);
 	}
+	
+/*	
 	ft_list_foreach_if(list2, &e_into_z, &data_ref, &do_not_cmp);
 	printf ("if list2->next->data points at 'hello everybody' and (*cmp)consider every void* equivalent, returning the same value with any 'void*'   , the char* must have changed into 'hzllo zvzrybody'\n");
 	printf ("received %s\n", (char*)list2->next->data);
@@ -186,6 +188,7 @@ void	e_into_z (void* data)
 	    clear(&copy);
 		return (1);
 	}
+	*/
 	clear(&copy);
 	clear(&list);
 	clear(&list2);

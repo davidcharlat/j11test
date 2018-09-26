@@ -18,7 +18,9 @@ int		main (void)
 	char	data2[] = "hello everybody";
 	char	data3[] = "bye";
 	char	data4[] = "bye";
+	t_list	*null;
 	
+	null = NULL;
 	printf ("testing ft_list_clear\n");
 	list = ft_create_elem ((void*)data1);
 	list2 = ft_create_elem ((void*)data1);
@@ -56,6 +58,8 @@ int		main (void)
 		printf ("error: received %p\n", (void*)(list));
 		return (1);
 	}
+	printf ("ft_list_clear must do nothing if *begin_list is NULL\n");
+	ft_list_clear (&null);
 	printf("ft_list_clear: OK\n");
 	printf ("OK\n");
 	return (0);
