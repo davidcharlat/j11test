@@ -23,6 +23,13 @@ int		main (void)
 		return (1);
 	}
 	printf ("OK\n");
+	printf ("the original list musn't have changed, list->data must point at 'hello_world' \n");
+	printf ("received %s\n", (char*)list->data);
+	if (list->data != data1)
+	{
+		printf ("error: received %s\n", (char*)(list->data));
+		return (1);
+	}
 	printf ("ft_list_last : OK\n");
 	return (0);
 }
